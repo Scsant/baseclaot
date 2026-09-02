@@ -1,0 +1,46 @@
+{
+  "name": "CaminhaoDisponivel",
+  "type": "object",
+  "properties": {
+    "cm": {
+      "type": "string",
+      "description": "C\u00f3digo do CM (identificador do caminh\u00e3o)"
+    },
+    "turno": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "description": "Turno de refer\u00eancia (1=06-14, 2=14-22, 3=22-06)"
+    },
+    "data_turno": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do turno"
+    },
+    "disponivel": {
+      "type": "boolean",
+      "default": true,
+      "description": "Indica se o caminh\u00e3o est\u00e1 dispon\u00edvel"
+    },
+    "motivo_indisponibilidade": {
+      "type": "string",
+      "description": "Motivo da indisponibilidade (se aplic\u00e1vel)"
+    },
+    "informado_por": {
+      "type": "string",
+      "description": "Nome do t\u00e9cnico que informou"
+    },
+    "observacoes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es adicionais"
+    }
+  },
+  "required": [
+    "cm",
+    "turno",
+    "data_turno"
+  ]
+}

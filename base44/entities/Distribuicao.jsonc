@@ -1,0 +1,22 @@
+{
+  "name": "Distribuicao",
+  "type": "object",
+  "properties": {
+    "btfs": {
+      "type": "object",
+      "description": "Mapa de BTFs com fazenda, modulo, bloqueado e motivo_bloqueio"
+    },
+    "last_saved_by": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio que fez o \u00faltimo salvamento"
+    },
+    "last_saved_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data/hora do \u00faltimo salvamento"
+    }
+  },
+  "required": [
+    "btfs"
+  ]
+}

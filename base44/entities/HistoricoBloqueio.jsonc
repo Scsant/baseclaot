@@ -1,0 +1,39 @@
+{
+  "name": "HistoricoBloqueio",
+  "type": "object",
+  "properties": {
+    "fazenda": {
+      "type": "string",
+      "description": "Nome da fazenda bloqueada"
+    },
+    "modulo": {
+      "type": "string",
+      "description": "M\u00f3dulo relacionado"
+    },
+    "motivo": {
+      "type": "string",
+      "description": "Motivo do bloqueio"
+    },
+    "bloqueio_em": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data/hora do bloqueio"
+    },
+    "desbloqueio_em": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data/hora do desbloqueio"
+    },
+    "duracao_minutos": {
+      "type": "number",
+      "description": "Dura\u00e7\u00e3o do bloqueio em minutos"
+    },
+    "registrado_por": {
+      "type": "string",
+      "description": "Usu\u00e1rio que registrou o desbloqueio"
+    }
+  },
+  "required": [
+    "fazenda"
+  ]
+}

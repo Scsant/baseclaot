@@ -1,0 +1,40 @@
+{
+  "name": "SessaoOperacao",
+  "type": "object",
+  "properties": {
+    "data_operacao": {
+      "type": "string",
+      "format": "date"
+    },
+    "turno": {
+      "type": "string"
+    },
+    "total_caminhoes": {
+      "type": "number"
+    },
+    "total_fazendas": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ativa",
+        "encerrada"
+      ],
+      "default": "ativa"
+    },
+    "importado_por": {
+      "type": "string"
+    },
+    "arquivo_origem": {
+      "type": "string"
+    },
+    "ultima_simulacao": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "data_operacao"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "name": "ReportTPA",
+  "type": "object",
+  "properties": {
+    "turno": {
+      "type": "string",
+      "description": "Ex: Turno A, B, C"
+    },
+    "data_turno": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do turno"
+    },
+    "horario_inicial": {
+      "type": "string",
+      "description": "Hora da atualiza\u00e7\u00e3o inicial (ex: 06h21)"
+    },
+    "horario_final": {
+      "type": "string",
+      "description": "Hora da atualiza\u00e7\u00e3o final (ex: 13h21)"
+    },
+    "horario_turno_inicio": {
+      "type": "string",
+      "description": "In\u00edcio do turno (ex: 06h)"
+    },
+    "horario_turno_fim": {
+      "type": "string",
+      "description": "Fim do turno (ex: 14h)"
+    },
+    "qtd_pessoas": {
+      "type": "number",
+      "description": "Quantidade de pessoas no turno"
+    },
+    "tpa_transporte_abertura": {
+      "type": "number"
+    },
+    "tpa_transporte_atual": {
+      "type": "number"
+    },
+    "tpa_prancha_abertura": {
+      "type": "number"
+    },
+    "tpa_prancha_atual": {
+      "type": "number"
+    },
+    "tpa_carregamento_abertura": {
+      "type": "number"
+    },
+    "tpa_carregamento_atual": {
+      "type": "number"
+    },
+    "tpa_nao_apontado_abertura": {
+      "type": "number"
+    },
+    "tpa_nao_apontado_atual": {
+      "type": "number"
+    },
+    "acoes_turno": {
+      "type": "string",
+      "description": "Principais a\u00e7\u00f5es realizadas no turno"
+    },
+    "pareto_transporte": {
+      "type": "string",
+      "description": "Ofensores de transporte (um por linha)"
+    },
+    "pareto_prancha": {
+      "type": "string",
+      "description": "Ofensores de prancha (um por linha)"
+    },
+    "pareto_carregamento": {
+      "type": "string",
+      "description": "Ofensores de carregamento (um por linha)"
+    },
+    "absenteismo_motoristas": {
+      "type": "string",
+      "description": "Motoristas faltantes"
+    },
+    "absenteismo_operadores": {
+      "type": "string",
+      "description": "Operadores faltantes"
+    },
+    "otimizacao_frota": {
+      "type": "string",
+      "description": "Otimiza\u00e7\u00f5es e aloca\u00e7\u00f5es de frota"
+    },
+    "status_turno": {
+      "type": "string",
+      "enum": [
+        "estavel",
+        "atencao",
+        "critico"
+      ],
+      "default": "atencao"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "parcial",
+        "final"
+      ],
+      "default": "parcial"
+    },
+    "criado_por": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data_turno",
+    "turno"
+  ]
+}

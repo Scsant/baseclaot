@@ -1,0 +1,82 @@
+{
+  "name": "FazendaPreditiva",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome da fazenda/projeto"
+    },
+    "codigo": {
+      "type": "string",
+      "description": "C\u00f3digo identificador"
+    },
+    "empresa": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "distancia_km": {
+      "type": "number",
+      "description": "Dist\u00e2ncia da f\u00e1brica em km"
+    },
+    "trecho_terra_km": {
+      "type": "number"
+    },
+    "trecho_asfalto_km": {
+      "type": "number"
+    },
+    "qtd_gruas": {
+      "type": "number",
+      "default": 2
+    },
+    "capacidade_max_caminhoes": {
+      "type": "number"
+    },
+    "tipo_estrada": {
+      "type": "string",
+      "enum": [
+        "boa",
+        "regular",
+        "ruim",
+        "critica"
+      ],
+      "default": "regular"
+    },
+    "velocidade_media_kmh": {
+      "type": "number",
+      "default": 45
+    },
+    "tempo_medio_carregamento_min": {
+      "type": "number",
+      "default": 35
+    },
+    "tempo_medio_fila_min": {
+      "type": "number",
+      "default": 15
+    },
+    "tempo_ciclo_historico_min": {
+      "type": "number"
+    },
+    "tempo_ciclo_chuva_min": {
+      "type": "number"
+    },
+    "tempo_ciclo_noturno_min": {
+      "type": "number"
+    },
+    "observacoes": {
+      "type": "string"
+    },
+    "ativa": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "nome",
+    "distancia_km"
+  ]
+}

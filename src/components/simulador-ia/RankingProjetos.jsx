@@ -1,0 +1,6 @@
+export default function RankingProjetos({ ranking = [] }) {
+  const statusStyle = (status = "") => status.toLowerCase().includes("excel") ? "bg-chart-2/10 text-chart-2" : status.toLowerCase().includes("aten") || status.toLowerCase().includes("crít") ? "bg-destructive/10 text-destructive" : "bg-primary/10 text-primary";
+  return (
+    <section className="rounded-2xl border border-border bg-card p-5 shadow-sm"><h2 className="text-lg font-bold">Ranking dos Projetos</h2><div className="mt-4 overflow-x-auto"><table className="w-full min-w-[620px] text-left text-sm"><thead><tr className="border-b border-border text-xs uppercase text-muted-foreground"><th className="pb-3">Posição</th><th className="pb-3">Projeto</th><th className="pb-3">Status</th><th className="pb-3">Nota</th><th className="pb-3">Análise</th></tr></thead><tbody>{ranking.map((item, index) => <tr key={`${item.projeto}-${index}`} className="border-b border-border/60"><td className="py-3 font-bold">#{index + 1}</td><td className="py-3 font-bold">{item.projeto}</td><td className="py-3"><span className={`rounded-full px-2 py-1 text-xs font-bold ${statusStyle(item.status)}`}>{item.status}</span></td><td className="py-3 text-lg font-black">{item.nota}</td><td className="max-w-sm py-3 text-xs text-muted-foreground">{item.justificativa}</td></tr>)}</tbody></table></div></section>
+  );
+}

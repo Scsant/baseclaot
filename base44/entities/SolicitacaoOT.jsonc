@@ -1,0 +1,100 @@
+{
+  "name": "SolicitacaoOT",
+  "type": "object",
+  "properties": {
+    "cm": {
+      "type": "string",
+      "description": "C\u00f3digo do CM"
+    },
+    "placa": {
+      "type": "string",
+      "description": "Placa do ve\u00edculo"
+    },
+    "frota": {
+      "type": "string",
+      "description": "C\u00f3digo da frota"
+    },
+    "btf": {
+      "type": "string",
+      "description": "BTF do ve\u00edculo"
+    },
+    "transportadora": {
+      "type": "string",
+      "description": "Nome da transportadora"
+    },
+    "observacoes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es adicionais"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "aguardando",
+        "liberada",
+        "cancelada",
+        "pendente"
+      ],
+      "default": "aguardando",
+      "description": "Status da solicita\u00e7\u00e3o"
+    },
+    "numero_ot": {
+      "type": "string",
+      "description": "N\u00famero da OT"
+    },
+    "data_solicitacao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da solicita\u00e7\u00e3o"
+    },
+    "data_liberacao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da libera\u00e7\u00e3o"
+    },
+    "data_pendencia": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora em que virou pend\u00eancia"
+    },
+    "usuario_solicitante": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio solicitante"
+    },
+    "usuario_liberacao": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio que liberou"
+    },
+    "tempo_espera_minutos": {
+      "type": "number",
+      "description": "Tempo de espera em minutos"
+    },
+    "tempo_pendencia_minutos": {
+      "type": "number",
+      "description": "Tempo total acumulado em pend\u00eancia (minutos), exclu\u00eddo do tempo de espera"
+    },
+    "motivo_pendencia": {
+      "type": "string",
+      "description": "Motivo da pend\u00eancia/bloqueio do caminh\u00e3o"
+    },
+    "is_desvio": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indica se o caminh\u00e3o foi desviado para outra fazenda"
+    },
+    "fazenda_origem": {
+      "type": "string",
+      "description": "Fazenda de origem (destino original antes do desvio)"
+    },
+    "fazenda_destino_desvio": {
+      "type": "string",
+      "description": "Nova fazenda de destino ap\u00f3s o desvio"
+    },
+    "motivo_desvio": {
+      "type": "string",
+      "description": "Motivo do desvio"
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

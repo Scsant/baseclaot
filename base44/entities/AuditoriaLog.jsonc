@@ -1,0 +1,65 @@
+{
+  "name": "AuditoriaLog",
+  "type": "object",
+  "properties": {
+    "acao": {
+      "type": "string",
+      "enum": [
+        "liberacao",
+        "cancelamento",
+        "pendencia",
+        "reativacao",
+        "solicitacao"
+      ],
+      "description": "Tipo de a\u00e7\u00e3o realizada"
+    },
+    "usuario": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio que realizou a a\u00e7\u00e3o"
+    },
+    "cm": {
+      "type": "string",
+      "description": "C\u00f3digo CM do caminh\u00e3o"
+    },
+    "placa": {
+      "type": "string",
+      "description": "Placa do ve\u00edculo"
+    },
+    "frota": {
+      "type": "string",
+      "description": "C\u00f3digo da frota"
+    },
+    "btf": {
+      "type": "string",
+      "description": "BTF do ve\u00edculo"
+    },
+    "transportadora": {
+      "type": "string",
+      "description": "Nome da transportadora"
+    },
+    "numero_ot": {
+      "type": "string",
+      "description": "N\u00famero da OT"
+    },
+    "motivo": {
+      "type": "string",
+      "description": "Motivo ou observa\u00e7\u00e3o da a\u00e7\u00e3o (pend\u00eancia, cancelamento, etc.)"
+    },
+    "solicitacao_id": {
+      "type": "string",
+      "description": "ID da SolicitacaoOT relacionada"
+    },
+    "data_acao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da a\u00e7\u00e3o"
+    },
+    "tempo_espera_minutos": {
+      "type": "number",
+      "description": "Tempo de espera em minutos at\u00e9 a a\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "acao"
+  ]
+}

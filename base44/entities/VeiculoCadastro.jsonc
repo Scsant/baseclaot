@@ -1,0 +1,38 @@
+{
+  "name": "VeiculoCadastro",
+  "type": "object",
+  "properties": {
+    "placa": {
+      "type": "string",
+      "description": "Placa do ve\u00edculo"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "proprio",
+        "terceiro"
+      ],
+      "description": "Tipo do ve\u00edculo"
+    },
+    "frota": {
+      "type": "string",
+      "description": "C\u00f3digo da frota (ve\u00edculos pr\u00f3prios)"
+    },
+    "btf": {
+      "type": "string",
+      "description": "BTF do ve\u00edculo (ve\u00edculos pr\u00f3prios)"
+    },
+    "transportadora": {
+      "type": "string",
+      "description": "Nome da transportadora (ve\u00edculos terceiros)"
+    },
+    "data_referencia": {
+      "type": "string",
+      "description": "Data de refer\u00eancia do cadastro"
+    }
+  },
+  "required": [
+    "placa",
+    "tipo"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "TrocaTurno",
+  "type": "object",
+  "properties": {
+    "turno": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "description": "Turno (1=06-14, 2=14-22, 3=22-06)"
+    },
+    "data_turno": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do turno"
+    },
+    "modulos": {
+      "type": "array",
+      "description": "Array com os 14 m\u00f3dulos e seus equipamentos",
+      "items": {
+        "type": "object"
+      }
+    },
+    "observacoes_gerais": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es gerais do turno para passagem"
+    },
+    "responsavel": {
+      "type": "string",
+      "description": "Nome do respons\u00e1vel pelo turno"
+    },
+    "status_fechamento": {
+      "type": "string",
+      "enum": [
+        "aberto",
+        "fechado"
+      ],
+      "default": "aberto",
+      "description": "Status do turno"
+    }
+  },
+  "required": [
+    "turno",
+    "data_turno"
+  ]
+}

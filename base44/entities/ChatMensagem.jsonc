@@ -1,0 +1,33 @@
+{
+  "name": "ChatMensagem",
+  "type": "object",
+  "properties": {
+    "texto": {
+      "type": "string",
+      "description": "Conte\u00fado da mensagem"
+    },
+    "autor_nome": {
+      "type": "string",
+      "description": "Nome do autor da mensagem"
+    },
+    "autor_role": {
+      "type": "string",
+      "enum": [
+        "operador",
+        "central",
+        "admin"
+      ],
+      "description": "Role do autor"
+    },
+    "data_envio": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora do envio"
+    }
+  },
+  "required": [
+    "texto",
+    "autor_nome",
+    "autor_role"
+  ]
+}

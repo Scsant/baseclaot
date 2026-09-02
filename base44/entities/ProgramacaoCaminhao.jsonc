@@ -1,0 +1,83 @@
+{
+  "name": "ProgramacaoCaminhao",
+  "type": "object",
+  "properties": {
+    "sessao_id": {
+      "type": "string",
+      "description": "ID da sess\u00e3o de importa\u00e7\u00e3o"
+    },
+    "data_operacao": {
+      "type": "string",
+      "format": "date"
+    },
+    "placa": {
+      "type": "string"
+    },
+    "transportadora": {
+      "type": "string"
+    },
+    "tipo_caminhao": {
+      "type": "string"
+    },
+    "produto": {
+      "type": "string"
+    },
+    "fazenda_id": {
+      "type": "string"
+    },
+    "fazenda_nome": {
+      "type": "string"
+    },
+    "horario_saida_fabrica": {
+      "type": "string",
+      "description": "HH:MM"
+    },
+    "observacoes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "programado",
+        "em_transito_ida",
+        "em_fila",
+        "carregando",
+        "em_transito_volta",
+        "concluido",
+        "cancelado"
+      ],
+      "default": "programado"
+    },
+    "previsao_chegada_fazenda": {
+      "type": "string"
+    },
+    "previsao_inicio_carregamento": {
+      "type": "string"
+    },
+    "previsao_fim_carregamento": {
+      "type": "string"
+    },
+    "previsao_chegada_fabrica": {
+      "type": "string"
+    },
+    "previsao_proxima_viagem": {
+      "type": "string"
+    },
+    "tempo_ciclo_previsto_min": {
+      "type": "number"
+    },
+    "indice_confianca": {
+      "type": "number",
+      "description": "0-100"
+    },
+    "ultima_atualizacao_previsao": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "placa",
+    "data_operacao",
+    "horario_saida_fabrica"
+  ]
+}
